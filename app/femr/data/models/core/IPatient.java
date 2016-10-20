@@ -44,6 +44,10 @@ public interface IPatient {
 
     void setAge(Date age);
 
+    Boolean getisBirthCalculated();
+
+    void setisBirthCalculated(Boolean isBirthCalculated);
+
     String getSex();
 
     void setSex(String sex);

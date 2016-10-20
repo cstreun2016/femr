@@ -187,7 +187,6 @@ public class PharmaciesController extends Controller {
             isCounseled = true;
         }
 
-
         // Map<id of the new prescription, id of the old prescription>
         Map<Integer, Integer> prescriptionsToReplace = new HashMap<>();
         // Map<id, isCounseled>

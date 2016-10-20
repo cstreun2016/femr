@@ -27,7 +27,6 @@ public class IndexEncounterViewModel {
     //patient encounter
     private PatientEncounterItem patientEncounterItem;
 
-
     public PatientItem getPatientItem() {
         return patientItem;
     }

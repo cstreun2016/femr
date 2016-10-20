@@ -372,6 +372,7 @@ var triageFields = {
         firstName: $('#firstName'),
         lastName: $('#lastName'),
         age: $('#age'),//doesn't work for an existing patient
+        isBirthCalculated: $('#isBirthCalculated'),
         years: $('#years'),
         months: $('#months'),
         ageClassification: $('[name=ageClassification]'),
@@ -565,6 +566,8 @@ $(document).ready(function () {
     $('#years').change(function () {
         if (birthdayAgeAutoCalculateFeature.ageChangeCheck()) {
             var birthDate = birthdayAgeAutoCalculateFeature.calculateBirthdayFromAge();
+            var isBirthCalculate = true;
+            $('#isBirthCalculated').val(true);
             var birthString = birthDate.toYMD();
             var nan = randomString(birthDate);
             if (nan === false) {
@@ -578,6 +581,7 @@ $(document).ready(function () {
     $('#months').change(function () {
         if (birthdayAgeAutoCalculateFeature.ageChangeCheck()) {
             var birthDate = birthdayAgeAutoCalculateFeature.calculateBirthdayFromAge();
+            var isBirthCalculated = true;
             var birthString = birthDate.toYMD();
             var nan = randomString(birthDate);
             if (nan === false) {

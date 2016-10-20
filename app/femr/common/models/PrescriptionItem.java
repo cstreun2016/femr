@@ -170,5 +170,5 @@ public class PrescriptionItem {
 
     public void setCounseled(Boolean counseled) {
         isCounseled = counseled;
-    }
+}
 }

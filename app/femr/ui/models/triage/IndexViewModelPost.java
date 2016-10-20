@@ -30,6 +30,7 @@ public class IndexViewModelPost {
     private String address;
     private String city;
     private Date age;
+    private Boolean isBirthCalculated;
     private String ageClassification;
     private String sex;
     public Boolean deletePhoto; //flag to determine if user would like to delete image file
@@ -110,7 +111,8 @@ public class IndexViewModelPost {
     public void setAge(Date age) {
         this.age = age;
     }
-
+    public Boolean getisBirthCalculated() {return this.isBirthCalculated;}
+    public void setisBirthCalculated (Boolean isBirthCalculated) {this.isBirthCalculated=isBirthCalculated;}
     public String getSex() {
         return sex;
     }

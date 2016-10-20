@@ -30,6 +30,7 @@ public class PatientItem {
     private Integer yearsOld;//the age of the patient as an integer. 0 if the patient is less than a year old
     private Integer monthsOld;
     private Date birth;
+    private Boolean isBirthCalculated;
     private String friendlyDateOfBirth;
     private String sex;
     private Integer photoId;
@@ -107,6 +108,10 @@ public class PatientItem {
     public void setBirth(Date birth) {
         this.birth = birth;
     }
+
+    public Boolean getisBirthCalculated () { return isBirthCalculated; }
+
+    public void setisBirthCalculated (Boolean isBirthCalculated ) { this.isBirthCalculated = isBirthCalculated; }
 
     public String getSex() {
         return sex;

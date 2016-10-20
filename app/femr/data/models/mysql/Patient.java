@@ -40,6 +40,8 @@ public class Patient implements IPatient {
     private String lastName;
     @Column(name = "age")
     private Date age;
+    @Column(name="isBirthCalculated",nullable = false)
+    private Boolean isBirthCalculated;
     @Column(name = "sex", nullable = true)
     private String sex;
     @Column(name = "address", nullable = true)
@@ -103,7 +105,15 @@ public class Patient implements IPatient {
     public void setAge(Date age) {
         this.age = age;
     }
+    @Override
+    public Boolean getisBirthCalculated() {
+        return isBirthCalculated;
+    }
 
+    @Override
+    public void setisBirthCalculated(Boolean isBirthCalculated) {
+        this.isBirthCalculated = isBirthCalculated;
+    }
     @Override
     public String getSex() {
         return sex;
