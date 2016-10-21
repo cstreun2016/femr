@@ -185,6 +185,11 @@ public class PharmaciesController extends Controller {
         boolean isCounseled = false;
         if (createViewModelPost.getDisclaimer() == 1){
             isCounseled = true;
+            //cyn [FEM-138]
+            if (isCounseled == false) {
+                throw new RuntimeException("Counseling is required");
+            }
+
         }
 
         // Map<id of the new prescription, id of the old prescription>
